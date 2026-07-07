@@ -48,7 +48,7 @@ LiquidCrystal_I2C lcd(LCD_I2C_ADDRESS, 20, 4);
 //     motor turns ON when it should be OFF (and vice versa), flip this.
 // ---------------------------------------------------------------------------
 #define RELAY_PIN 26
-#define RELAY_ACTIVE_LOW true
+#define RELAY_ACTIVE_LOW false
 
 static inline void relayWrite(bool on) {
 	digitalWrite(RELAY_PIN, (on == RELAY_ACTIVE_LOW) ? LOW : HIGH);
